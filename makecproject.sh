@@ -13,3 +13,4 @@ mkdir  $project/doc
 
 touch $project/src/main.cpp
 
+vim $project/src/main.cpp
