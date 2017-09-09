@@ -13,4 +13,8 @@ mkdir  $project/doc
 
 touch $project/src/main.cpp
 
+
+##VIM
+##YCM Generator for Project dependent compilation flags, makes my life easier. 
+./config_gen.py $project
 vim $project/src/main.cpp
