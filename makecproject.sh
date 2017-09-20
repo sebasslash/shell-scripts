@@ -20,6 +20,7 @@ if [$language = "C++"];then
 else if [$language= "C"];then 
 	$main="main.c"
 	touch $project/src/$main
+fi
 cd $project
 ##VIM
 ##YCM Generator for Project dependent compilation flags, makes my life easier. 
@@ -28,8 +29,9 @@ read editor
 
 if [editor = "Vim"]; then
 	./config_gen.py $project
+	vim src/$main
 else if [editor = "Emacs"]; then
 	bear make
-
+	emacs src/$main
+fi
 touch CMakeLists.txt
-vim src/$main
