@@ -28,10 +28,10 @@ echo "Vim or emacs?"
 read editor
 
 if [editor = "Vim"]; then
-	./config_gen.py $project
+	cd $project/build
+	touch CMakeLists.txt
+	~/.vim/bundle/YCM-Generator./config_gen.py ~/programs/$project/build
 	vim src/$main
 else if [editor = "Emacs"]; then
-	bear make
 	emacs src/$main
 fi
-touch CMakeLists.txt
